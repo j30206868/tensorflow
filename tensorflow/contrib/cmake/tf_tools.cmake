@@ -30,7 +30,6 @@ add_executable(${proto_text}
 target_link_libraries(${proto_text} PUBLIC
   ${tensorflow_EXTERNAL_LIBRARIES}
   tf_protos_cc
-  tf_python_protos_cc
 )
 
 add_dependencies(${proto_text} tf_core_lib)
@@ -80,7 +79,6 @@ add_executable(${transform_graph}
 
 target_link_libraries(${transform_graph} PUBLIC
   tf_protos_cc
-  tf_python_protos_cc
   ${tf_core_gpu_kernels_lib}
   ${tensorflow_EXTERNAL_LIBRARIES}
 )
@@ -103,7 +101,6 @@ add_executable(${summarize_graph}
 
 target_link_libraries(${summarize_graph} PUBLIC
   tf_protos_cc
-  tf_python_protos_cc
   ${tf_core_gpu_kernels_lib}
   ${tensorflow_EXTERNAL_LIBRARIES}
 )
@@ -126,7 +123,6 @@ add_executable(${compare_graphs}
 
 target_link_libraries(${compare_graphs} PUBLIC
   tf_protos_cc
-  tf_python_protos_cc
   ${tf_core_gpu_kernels_lib}
   ${tensorflow_EXTERNAL_LIBRARIES}
 )
@@ -148,7 +144,6 @@ add_executable(${benchmark_model}
 
 target_link_libraries(${benchmark_model} PUBLIC
   tf_protos_cc
-  tf_python_protos_cc
   ${tf_core_gpu_kernels_lib}
   ${tensorflow_EXTERNAL_LIBRARIES}
 )
